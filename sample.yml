@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+ name: testpod
+spec:
+ containers:
+ - name: c00
+   image: ubuntu
+   command: ["/bin/bash", "-c", "while true; do echo Hello-Kubernetes; sleep 5 ; done"]
+ restartPolicy: Never  # This line should be aligned with the 'containers' key
+
